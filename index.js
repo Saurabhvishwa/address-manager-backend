@@ -14,8 +14,6 @@ const db = admin.firestore();
 app.use(cors());
 
 
-
-
 app.get('/' , (req,res) => {
     const addressses = []
     db.collection('address').get().then(data => {
