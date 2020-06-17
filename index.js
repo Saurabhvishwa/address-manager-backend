@@ -31,14 +31,7 @@ app.get('/' , (req,res) => {
 
 app.post('/add' , (req,res) => {
     const errors = {}
-    const address = {
-        type:req.body.type,
-        houseinfo:req.body.houseinfo,
-        area:req.body.area,
-        city:req.body.city,
-        pincode:req.body.pincode,
-        state:req.body.state
-    }
+    const address = {}
     if(req.body.type.trim() === '') errors.type = "Must not be empty"
     else address.type = req.body.type
 
